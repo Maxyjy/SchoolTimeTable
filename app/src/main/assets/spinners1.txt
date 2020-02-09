@@ -1,0 +1,101 @@
+{
+	"spinnerList": [
+
+            {
+                "paraName": "第1周",
+                "paraValue": "1"
+            },
+            {
+                "paraName": "第2周",
+                "paraValue": "2"
+            },
+            {
+                "paraName": "第3周",
+                "paraValue": "3"
+            },
+            {
+                "paraName": "第4周",
+                "paraValue": "4"
+            },
+            {
+                "paraName": "第5周",
+                "paraValue": "5"
+            },
+            {
+                "paraName": "第6周",
+                "paraValue": "6"
+            },
+            {
+                "paraName": "第7周",
+                "paraValue": "7"
+            },
+            {
+                "paraName": "第8周",
+                "paraValue": "8"
+            },
+            {
+                "paraName": "第9周",
+                "paraValue": "9"
+            },
+            {
+                "paraName": "第10周",
+                "paraValue": "10"
+            },
+            {
+                "paraName": "第11周",
+                "paraValue": "11"
+            },
+            {
+                "paraName": "第12周",
+                "paraValue": "12"
+            },
+            {
+                "paraName": "第13周",
+                "paraValue": "13"
+            },
+            {
+                "paraName": "第14周",
+                "paraValue": "14"
+            },
+            {
+                "paraName": "第15周",
+                "paraValue": "15"
+            },
+            {
+                "paraName": "第16周",
+                "paraValue": "16"
+            },
+            {
+                "paraName": "第17周",
+                "paraValue": "17"
+            },
+            {
+                "paraName": "第18周",
+                "paraValue": "18"
+            },
+            {
+                "paraName": "第19周",
+                "paraValue": "19"
+            },
+            {
+                "paraName": "第20周",
+                "paraValue": "20"
+            },
+            {
+                "paraName": "第21周",
+                "paraValue": "21"
+            },
+            {
+                "paraName": "第22周",
+                "paraValue": "22"
+            },
+            {
+                "paraName": "第23周",
+                "paraValue": "23"
+            },
+            {
+                "paraName": "第24周",
+                "paraValue": "24"
+            }
+	]
+}

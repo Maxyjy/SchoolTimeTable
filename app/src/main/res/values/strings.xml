@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">闽院课程表</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <style name="login_title">登录教务系统</style>
+
+    <style name="timetable_title">登录教务系统</style>
+
+    <style name="test_query_title">考试安排查询</style>
+
+    <style name="result_query_title">成绩结果查询</style>
+
+
+    <string name="menu_home">课程表</string>
+    <string name="menu_refresh_timetable">刷新课程表</string>
+    <string name="menu_gallery">成绩查询</string>
+    <string name="menu_slideshow">考试查询</string>
+    <string name="menu_tools">关于/反馈</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <drawable name="clr_normal">#ffffff</drawable>
+    <drawable name="clr_pressed">#E4E4E4</drawable>
+
+    <drawable name="login_clr_normal">#71aaf9</drawable>
+    <drawable name="login_clr_pressed">#5680B9</drawable>
+
+    <string name="space">&#8201;</string>
+</resources>

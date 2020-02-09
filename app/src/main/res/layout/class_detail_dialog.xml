@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/class_detail_dialog_bg"
+    android:layout_centerInParent="true"
+    android:id="@+id/ll_class_detail_layout"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_close_black_24dp"
+        android:layout_gravity="end"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/black"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/black"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:id="@+id/tv_day_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_class_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_class_room_by_week_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地点："
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                />
+            <TextView
+                android:id="@+id/tv_class_room_by_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+
+                android:layout_toRightOf="@id/tv_class_room_by_week_hint"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#71aaf9</color>
+    <color name="colorPrimaryDark">#71aaf9</color>
+    <color name="colorAccent">#71aaf9</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="dark">#5e5656</color>
+    <color name="table_bg">#fcfcfc</color>
+    <color name="table_hint">#0b3356</color>
+    <color name="table_divide">#e6eaeb</color>
+    <color name="notthisweektext">#bccad5</color>
+    <color name="testschedulebg">#f8f7f7</color>
+    <color name="f6Gray">#f6f6f6</color>
+    <color name="activitybg">#ededed</color>
+    <color name="default_hint">#6e6e6e</color>
+
+    <color name="result_pass">#05e400</color>
+    <color name="result_fail">#E60000</color>
+
+    <!-- *********************popwindow样式下拉菜单************************* -->
+
+    <!-- popwindow样式下拉菜单文本选中状态的颜色 -->
+    <color name="spinnerpop_selected_text_color">#fff</color>
+    <!-- popwindow样式下拉菜单文本默认状态的颜色 -->
+    <color name="spinnerpop_normal_text_color">#191919</color>
+    <!-- popwindow样式下拉菜单可编辑的背景颜色 -->
+    <color name="spinnerpop_canedit_bg_color">#ffffff</color>
+    <!-- popwindow样式下拉菜单不可编辑的背景颜色 -->
+    <color name="spinnerpop_notedit_bg_color">#C5C5C5</color>
+
+
+    <color name="timetablecolor1">#84DCC6</color>
+    <color name="timetablecolor2">#7d77db</color>
+    <color name="timetablecolor3">#d49bec</color>
+    <color name="timetablecolor4">#f49c9e</color>
+</resources>

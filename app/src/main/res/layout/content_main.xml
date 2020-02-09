@@ -1,0 +1,2493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
+        android:background="@color/white"
+        android:visibility="gone"
+
+        >
+
+        <EditText
+            android:id="@+id/et_stuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:hint="请输入学号" />
+
+        <EditText
+            android:id="@+id/et_stupsw"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:hint="请输入密码" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:background="@color/f6Gray"
+
+                    />
+
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:hint="请输入验证码" />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/pb_loading_code"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="7.5dp"
+                />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/code_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/dark"
+            android:text="点击图片更换验证码"
+            />
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_button_press"
+            android:stateListAnimator="@null"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_time_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:id="@+id/line_hint"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+
+            >
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:gravity="center"
+                android:textColor="@color/table_hint"
+                android:background="@color/table_bg"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_hint_cell_hint_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="1"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="2"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="3"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="4"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="5"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="6"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="7"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="8"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="9"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="10"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+            <TextView
+                android:id="@+id/line_hint_cell_hint_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="11"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                android:textColor="@color/table_hint"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_monday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/monday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_monday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周一"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_monday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_monday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_monday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_monday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_tuesday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/tuesday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_tuesday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周二"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_tuesday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_tuesday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text=""
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_tuesday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_tuesday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_wednesday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/wednesday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_wednesday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周三"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_wednesday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_wednesday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text=""
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_wednesday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_wednesday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_thursday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/thursday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_thursday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周四"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_thursday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_thursday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text=""
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_thursday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_thursday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_friday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/friday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_friday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周五"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_friday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_friday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text=""
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_friday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_friday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_saturday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/saturday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_saturday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周六"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_saturday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_saturday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text=""
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_saturday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_saturday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_sunday"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/table_bg"
+                >
+                <LinearLayout
+                    android:id="@+id/sunday_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:id="@+id/line_sunday_cell_hint_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="周日"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/table_hint"
+                        />
+                    <TextView
+                        android:id="@+id/line_sunday_cell_hint_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/table_hint"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/table_divide"/>
+            <TextView
+                android:id="@+id/line_sunday_cell_1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text=""
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_1_2_3"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_4"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_1_2_3_4"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_5"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_6"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_5_6"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_7"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_5_6_7"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_8"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_5_6_7_8"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/line_sunday_cell_9"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_9_10"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_11"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+
+
+                />
+            <TextView
+                android:id="@+id/line_sunday_cell_9_10_11"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+android:paddingRight="5dp"
+android:paddingTop="3dp"
+android:paddingBottom="5dp"
+
+                android:textSize="@dimen/table_text_size"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/wechat"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/wechat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系微信"
+            android:layout_below="@id/wechat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
