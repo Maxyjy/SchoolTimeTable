@@ -14,12 +14,15 @@
 ## 一、效果图：
 **初次打开需要登陆系统**</br>
 <img height="" width="320" src="https://img-blog.csdnimg.cn/20200209173947525.jpg"></br>
+
 **登录系统后导入课程表  转化成json字符串保存至本地**</br>
 **可选周查看别的周的课程**</br>
 <img height="" width="320" src="https://img-blog.csdnimg.cn/20200113144513609.jpg"></br>
+
 **考试安排查询，也做了保存，</br>
 因为学校里还没考完试就把教务系统更新了，不保存会导致还在考试周但查不到安排**</br>
 <img height="" width="320" src="https://img-blog.csdnimg.cn/20200113144345811.jpg"></br>
+
 **成绩查询结果，每次查询要登陆教务系统，</br>
 不过第一次进入APP登录就在本地保存了账号密码，只需输入验证码就好了**</br>
 <img height="" width="320" src="https://img-blog.csdnimg.cn/2020011314443674.jpg"></br>
